@@ -621,9 +621,8 @@ window.__require = function e(t, n, i) {
                     onReward: o,
                     onFinish: h,
                     onError: u
-                }) : r ?
-                    o(),
-                    console.info("====> show RewardedVideo success")
+                }) :
+                    o()
                     /*MiniGameAds.isRewardvideoReady() && (i(),
                     cc.gameSpace.audioManager.pauseAll(),
                     MiniGameAds.showRewardedVideo().then(function () {
