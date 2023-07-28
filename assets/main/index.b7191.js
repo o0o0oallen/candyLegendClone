@@ -578,25 +578,7 @@ window.__require = function e(t, n, i) {
                 s ? tgaGameSDK.showSlotAd({
                     onPlay: i,
                     onFinish: o
-                }) : r ? MiniGameAds.isInterstitialReady() ? (i(),
-                    cc.gameSpace.audioManager.pauseAll(),
-                    MiniGameAds.showInterstitial().then(function () {
-                        console.info("====> show interstitial success")
-                    }).catch(function (e) {
-                        console.error("====> show interstitial error: " + e.message),
-                            h({
-                                code: "AD/UNKNOWN_ERROR",
-                                message: e.message
-                            })
-                    }).finally(function () {
-                        o(),
-                            cc.gameSpace.audioManager.resumeAll()
-                    })) : (h({
-                        code: "AD/UNKNOWN_ERROR",
-                        message: "resource not ready"
-                    }),
-                        o()) : (o(),
-                            setTimeout(o, 50))
+                }) : r
             },
             showRewardAd: function (e) {
                 void 0 === e && (e = {});
