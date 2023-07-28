@@ -3506,7 +3506,9 @@ digest: ` + r, "HMACSHA512-SecretKey")),
 				if (console.info("minigame loader inited..."), !t.features || !t.features.ads) return console.info("missing features or missing ads"), Promise.reject({
 					message: "missing features or missing ads"
 				});
-				t.platform !== oi.MATCH && (ae.load(t.features.ads), window.MiniGameAds = ae, window.MinigameAds = ae);
+				return /*window.Analytics = ai, window.MiniGameAnalytics = ai,*/ Promise.resolve()
+
+				/*t.platform !== oi.MATCH && (ae.load(t.features.ads), window.MiniGameAds = ae, window.MinigameAds = ae);
 				var {
 					features: e,
 					platform: r
@@ -3524,7 +3526,7 @@ digest: ` + r, "HMACSHA512-SecretKey")),
 				} catch (e) {
 					console.error("MiniGameAnalytics init fail: ", e)
 				}
-				return window.Analytics = ai, window.MiniGameAnalytics = ai, Promise.resolve()
+				return window.Analytics = ai, window.MiniGameAnalytics = ai, Promise.resolve()*/
 			})
 		},
 		setLoadingProgress: function (e) {
